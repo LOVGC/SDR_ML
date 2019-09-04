@@ -314,3 +314,13 @@ print("RF_Normed_scores are ", RF_norm_score)
 
 t, t_p_value = scipy.stats.ttest_ind(GA_norm_score, RF_norm_score, equal_var = False)
 u, u_p_value = scipy.stats.mannwhitneyu(GA_norm_score, RF_norm_score)
+
+def write_list_to_csv(guest_list, filename):
+    with open(filename, 'w') as outfile:
+        for entries in guest_list:
+            outfile.write(entries)
+            outfile.write(",")
+
+print("Writing data to files")
+write_list_to_csv(map(str, GA_norm_score), "RF_GA_scores.csv")
+write_list_to_csv(map(str, RF_norm_score), "RF_scores.csv")
