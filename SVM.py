@@ -20,7 +20,7 @@ warnings.filterwarnings("ignore")
 data_path = './spectrum_data/Nothing_Mine_CEandRock.xlsx'
 max_score = 2/15
 min_score = -1/5
-num_experiments = 5
+num_experiments = 100
 # prepare train/test data
 
 # read data
