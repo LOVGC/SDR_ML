@@ -33,7 +33,7 @@ print("Set up algorithm parameters")
 num_trees = 100 # Number of trees in RF
 IND_SIZE =  10  # Number of trees selected by GA 
 POP_SIZE =  30  # Population size used in the GA algorithm
-experiment_times = 100  #
+experiment_times = 2  #
 input_data_file_path = './spectrum_data/Nothing_Mine_CEandRock.xlsx'
 max_score = 2/15  # what is the max_score under our fitness function, used in normalization of the score
 min_score = -1/5  # what is the min_score under our fitness fucntion
@@ -322,8 +322,8 @@ def write_list_to_csv(guest_list, filename):
             outfile.write(",")
 
 print("Writing data to files")
-write_list_to_csv(map(str, GA_norm_score), "RF_GA_scores.csv")
-write_list_to_csv(map(str, RF_norm_score), "RF_scores.csv")
+# write_list_to_csv(map(str, GA_norm_score), "RF_GA_scores.csv")
+# write_list_to_csv(map(str, RF_norm_score), "RF_scores.csv")
 
 """
 np.save("test.npy", [[2,3,4], [1,2]])
